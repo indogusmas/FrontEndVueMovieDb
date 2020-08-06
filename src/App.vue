@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Popular</router-link>|
-      <router-link to="/about">About</router-link>
+    <div id="nav" class="">
+      <router-link class = "navbar-brand" to="/">Popular</router-link>
+      <router-link class = "navbar-brand" to="/about">About</router-link>
     </div>
     <div class="container">
       <div class="row">
-      <div class="col-lg">
+      <div class="col">
         <router-view />
       </div>
     </div>
@@ -14,6 +14,14 @@
   </div>
 </template>
 
+
+
+<script>
+import "bootstrap/dist/css/bootstrap.css";
+export default {
+  
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
