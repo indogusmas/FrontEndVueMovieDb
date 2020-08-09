@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-    <div id="nav" class="">
-      <router-link class = "navbar-brand" to="/">Popular</router-link>
-      <router-link class = "navbar-brand" to="/about">About</router-link>
-    </div>
-    <div class="container">
-      <div class="row">
-      <div class="col">
-        <router-view />
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav mx-auto">
+          <li class="nav-item">
+            <router-link class="navbar-brand" to="/">Popular</router-link>
+            <router-link class="navbar-brand" to="/about">About</router-link>
+          </li>
+        </ul>
       </div>
-    </div>
+    </nav>
+    <br>
+    <div class="container">
+      <router-view />
     </div>
   </div>
 </template>
@@ -18,29 +21,13 @@
 
 <script>
 import "bootstrap/dist/css/bootstrap.css";
-export default {
-  
-}
+export default {};
 </script>
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style scoped>
+.navbar-brand {
+  color: #000 !important; 
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.navbar-brand:hover, .navbar-brand:focus {
+color: #42b983 !important;
 }
 </style>
